@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href={% static "login.css"%}/>
+        
+       <style>
+             body{
+                   background-image: url({% static 'attimg.jpg' %});
+                   background-repeat: no-repeat;
+                   background-size: 100% 100%;
+            }
+        </style>
+    </head>
+        <body>
+               <form action="/simple_function">
+               {%csrf_token%}
+                <div id="dashboard">
+                   <br>
+                    <a href="{{dash}}">
+                        <button  id="dlbutton2"type="submit"  >Dashboard</button>
+                        </a>
+                    <br>
+                    <br>
+                    <button  id="dbutton"type="submit" name="attendence">Download Attendance</button>
+                    <br>
+                    <button  id="dbutton"type="submit" onclick="test">Take Attendance</button>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="{{log}}">
+                    <button  id="dlbutton"type="submit" >Logout</button> 
+                    </a>
+                    
+                  
+                </div>
+                </form>
+                
+        </body>
+</html>

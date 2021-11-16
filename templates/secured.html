@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href={% static "login.css" %}>
+        <style>
+            body{
+                  background-image: url({% static 'secureimg.jpg' %});
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+           }
+       </style>
+    </head>
+        <body>
+               
+                <div id="dashboard">
+                   <br>
+                    <a href="{{dash}}">
+                        <button  id="dlbutton2"type="submit" >Dashboard</button>
+                       </a>
+                   
+                    
+                       
+                       <br>
+                       <br>
+                    <button  id="dbutton"type="submit" >Download Entry Log</button>
+                    <br>
+                    <br>
+                    <button  id="dbutton"type="submit" >Take Entry log</button>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <a href="{{log}}">
+                        <button  id="dlbutton"type="submit" >Logout</button> 
+                        </a>
+              
+                  
+                </div>
+        </body>
+</html>

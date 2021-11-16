@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href={% static "login.css" %}/>
+        <style>
+        body{
+            background-image: url({% static 'indeximg.jpg' %});
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        </style>
+    </head>
+        <body>
+               <form action='/login' method="POST">
+                    {% csrf_token %}
+                <div id="login">
+                    <br>
+                    <h3 >Admin Login</h3 > 
+                    <br>
+                    <label >Username:</label>
+                    <br> 
+                    <input  type="text" class="input" placeholder="Enter your username" name="uname">
+                    <br>
+                    <br>
+                    
+                    <label >Password:</label> 
+                    <br>
+                    <input type="password" class="input" placeholder="Enter your password" name="psw">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button class="lbutton" type="submit" >Login</button>
+                    <br>
+                    <br>
+                    <br>
+                    <div id="alert">
+                    {% for message in messages %}
+                    <h3> {{message}} </h3>
+                    {% endfor %}
+                    </div>
+                </div>
+
+
+               </form>
+
+               
+        </body>
+</html>
